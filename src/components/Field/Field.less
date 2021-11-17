@@ -1,0 +1,12 @@
+.field {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  grid-template: "header" 120px "content" auto "ledge" auto / auto;
+}
+@media only screen and (max-width: 550px) {
+  .field {
+    grid-template: "header" 120px "content" auto "ledge" auto / 100%;
+  }
+}

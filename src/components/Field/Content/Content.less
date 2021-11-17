@@ -1,0 +1,39 @@
+.Content {
+  grid-area: content;
+  width: 100vw;
+  height: auto;
+  background: linear-gradient(
+    to bottom,
+    rgb(214, 214, 214),
+    rgb(253, 231, 231)
+  );
+}
+.tabs {
+  display: none;
+}
+.mobs {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .Content {
+    display: block;
+    grid-area: content;
+    width: 90vw;
+    height: 600px;
+    margin: auto;
+    background: linear-gradient(
+      to bottom,
+      rgb(214, 214, 214),
+      rgb(253, 231, 231)
+    );
+  }
+  .comps {
+    display: none;
+  }
+  .mobs {
+    display: none;
+  }
+  .tabs {
+    display: block;
+  }
+}

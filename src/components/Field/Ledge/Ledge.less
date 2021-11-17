@@ -1,0 +1,95 @@
+.Ledge {
+  width: 100vw;
+  z-index: 2;
+  grid-area: ledge;
+  color: white;
+  display: grid;
+  grid-template:
+    "left right" 175px/
+    1fr 1fr;
+  &__left {
+    grid-area: left;
+    background: linear-gradient(to left, rgb(38, 10, 165), rgb(69, 109, 221));
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 40px;
+  }
+  &__info {
+    margin: 0 0 10px 5px;
+  }
+  &__help {
+    display: flex;
+    font-weight: 400;
+    justify-content: left;
+    cursor: pointer;
+  }
+  &__name {
+    padding: 7px 0 0 10px;
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+    &--1 {
+      background: url(../../../images/icons/menu-help.svg) no-repeat center/20px;
+    }
+    &--2 {
+      background: url(../../../images/icons/menu-message.svg) no-repeat
+        center/20px;
+    }
+  }
+  &__name {
+    font-size: 14px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: left;
+    width: 240px;
+    height: 60px;
+    cursor: pointer;
+    &--instagram {
+      background: url(../../../images/icons/instagram.svg) no-repeat center/40px;
+    }
+    &--pinterest {
+      background: url(../../../images/icons/pinterest.svg) no-repeat center/40px;
+    }
+    &--youtube {
+      background: url(../../../images/icons/youtube.svg) no-repeat center/40px;
+    }
+    &--facebook {
+      background: url(../../../images/icons/facebook.svg) no-repeat center/40px;
+    }
+    &--youtube,
+    &--pinterest,
+    &--instagram {
+      margin-right: 20px;
+    }
+  }
+  &__right {
+    grid-area: right;
+    font-size: 15px;
+    background: linear-gradient(to left, rgb(69, 109, 221), rgb(38, 10, 165));
+    padding: 20px 0 0 40px;
+    &--conditional {
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 660px) {
+  .Ledge {
+    display: grid;
+    grid-area: ledge;
+    grid-template: "left" 175px "right" 175px / 100vw;
+    &__right {
+      grid-area: right;
+      font-size: 14px;
+      background: linear-gradient(to left, rgb(69, 109, 221), rgb(38, 10, 165));
+      padding: 10px 0 0 40px;
+    }
+    &__icons {
+      display: flex;
+      justify-content: right;
+      width: 240px;
+      height: 60px;
+    }
+  }
+}

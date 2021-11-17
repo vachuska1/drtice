@@ -1,0 +1,56 @@
+.Header {
+  display: grid;
+  height: 120px;
+  width: 100vw;
+  grid-area: header;
+  color: rgb(253, 247, 247);
+  background: linear-gradient(to left, rgb(38, 10, 165), rgb(69, 109, 221));
+  grid-template:
+    "logo menu contact" auto /
+    20% 65% 15%;
+  a {
+    text-decoration: none;
+    margin: auto;
+    font-size: 15px;
+  }
+}
+.Logo,
+.Contact {
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+}
+.Logo {
+  grid-area: logo;
+  background: url(../../../images/icons/logo1.svg);
+  background-size: 170px;
+  width: 200px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Contact {
+  grid-area: contact;
+  color: rgb(243, 239, 255);
+}
+@media only screen and (max-width: 860px) {
+  .Header {
+    display: grid;
+    grid-template:
+      ". logo contact ." 60px
+      ". menu menu ." 40px /
+      1% 49% 49% 1%;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .Header {
+    display: grid;
+    grid-template:
+      ". logo contact ." 60px
+      ". menu . ." 40px /
+      1% 49% 49% 1%;
+  }
+  .Contact {
+    font-size: 15px;
+  }
+}
